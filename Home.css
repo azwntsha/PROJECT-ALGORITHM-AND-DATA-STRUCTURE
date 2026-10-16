@@ -1,0 +1,512 @@
+/* =========================
+   GLOBAL
+========================= */
+
+body{
+    margin:0;
+    padding:0;
+    font-family:"Poppins",sans-serif;
+}
+
+.home{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    overflow:hidden;
+    background:linear-gradient(135deg,#4B1D31,#6E2947);
+}
+
+/* =========================
+   BACKGROUND
+========================= */
+
+.background-circle{
+    position:absolute;
+    border-radius:50%;
+    background:rgba(255,255,255,.08);
+}
+
+.circle1{
+    width:260px;
+    height:260px;
+    top:-70px;
+    left:-70px;
+}
+
+.circle2{
+    width:180px;
+    height:180px;
+    bottom:-50px;
+    right:-50px;
+}
+
+.circle3{
+    width:130px;
+    height:130px;
+    left:8%;
+    bottom:12%;
+}
+
+/* =========================
+   LANDING CARD
+========================= */
+
+.landing-card{
+
+    width:380px;
+
+    background:rgba(255,255,255,.10);
+
+    backdrop-filter:blur(16px);
+
+    border-radius:28px;
+
+    padding:40px;
+
+    text-align:center;
+
+    color:white;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.30);
+
+    animation:fadeIn .7s ease;
+
+}
+
+.logo{
+
+    margin-bottom:18px;
+
+    animation:float 3s ease-in-out infinite;
+
+}
+
+.landing-card h1{
+
+    margin:0;
+
+    font-size:40px;
+
+    font-weight:800;
+
+    line-height:1.3;
+
+    letter-spacing:.5px;
+
+    text-shadow:0 5px 18px rgba(0,0,0,.35);
+
+}
+
+.landing-card h1 span{
+
+    display:inline-block;
+
+    margin:4px 0;
+
+}
+
+.landing-card p{
+
+    margin-top:22px;
+
+    font-size:18px;
+
+    opacity:.9;
+
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.start-btn{
+
+    width:100%;
+
+    margin-top:35px;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:#E2B357;
+
+    color:#4B1D31;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.start-btn:hover{
+
+    transform:translateY(-4px);
+
+    background:#F4C96D;
+
+    box-shadow:0 12px 28px rgba(0,0,0,.30);
+
+}
+
+/* =========================
+   DASHBOARD
+========================= */
+
+.dashboard{
+
+    width:430px;
+
+    background:rgba(255,255,255,.10);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:28px;
+
+    padding:35px;
+
+    color:white;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.30);
+
+    animation:fadeIn .7s ease;
+
+}
+
+.dashboard h1{
+
+    margin:0;
+
+    font-size:32px;
+
+    text-align:center;
+
+    text-shadow:0 5px 15px rgba(0,0,0,.35);
+
+}
+
+.subtitle{
+
+    margin-top:10px;
+
+    margin-bottom:25px;
+
+    text-align:center;
+
+    opacity:.9;
+
+}
+
+/* =========================
+   STATUS
+========================= */
+
+.stats{
+
+    display:flex;
+
+    gap:18px;
+
+    margin-bottom:28px;
+
+}
+
+.stat-card{
+
+    flex:1;
+
+    padding:20px;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    backdrop-filter:blur(10px);
+
+    transition:.3s;
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-4px);
+
+}
+
+.stat-card svg{
+
+    margin-bottom:8px;
+
+}
+
+.stat-card h2{
+
+    margin:0;
+
+    font-size:40px;
+
+}
+
+.stat-card span{
+
+    display:block;
+
+    margin-top:8px;
+
+    font-weight:600;
+
+}
+
+.available-card{
+
+    background:linear-gradient(
+        135deg,
+        rgba(46,125,50,.28),
+        rgba(76,175,80,.12)
+    );
+
+    border:1px solid rgba(130,255,150,.30);
+
+}
+
+.available-card h2,
+.available-card svg{
+
+    color:#78F88C;
+
+}
+
+.available-card span{
+
+    color:#E0FFE6;
+
+}
+
+.occupied-card{
+
+    background:linear-gradient(
+        135deg,
+        rgba(183,28,28,.28),
+        rgba(229,57,53,.12)
+    );
+
+    border:1px solid rgba(255,120,120,.30);
+
+}
+
+.occupied-card h2,
+.occupied-card svg{
+
+    color:#FF9C90;
+
+}
+
+.occupied-card span{
+
+    color:#FFE5E1;
+
+}
+
+/* =========================
+   MENU CARD
+========================= */
+
+.menu-card{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    background:white;
+
+    color:#4B1D31;
+
+    border-radius:18px;
+
+    padding:18px;
+
+    margin-bottom:14px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:0 10px 20px rgba(0,0,0,.18);
+
+}
+
+.menu-card:hover{
+
+    transform:translateY(-4px);
+
+    background:#F4C96D;
+
+}
+
+.menu-icon{
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:14px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#F7E8BF;
+
+    color:#5A243E;
+
+    flex-shrink:0;
+
+}
+
+.menu-card:hover .menu-icon{
+
+    background:white;
+
+}
+
+.menu-text{
+
+    flex:1;
+
+    text-align:left;
+
+}
+
+.menu-text h3{
+
+    margin:0;
+
+    font-size:18px;
+
+}
+
+/* =========================
+   BACK TO LANDING
+========================= */
+
+.landing-btn{
+
+    width:100%;
+
+    margin-top:22px;
+
+    padding:15px;
+
+    border-radius:18px;
+
+    border:2px solid rgba(244,201,109,.45);
+
+    background:transparent;
+
+    color:#F4C96D;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.landing-btn:hover{
+
+    background:#F4C96D;
+
+    color:#4B1D31;
+
+    transform:translateY(-3px);
+
+}
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes float{
+
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-10px);}
+    100%{transform:translateY(0);}
+
+}
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#E2B357;
+
+    border-radius:10px;
+
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:600px){
+
+    .landing-card,
+    .dashboard{
+
+        width:90%;
+
+        padding:25px;
+
+    }
+
+    .landing-card h1,
+    .dashboard h1{
+
+        font-size:28px;
+
+    }
+
+    .stats{
+
+        flex-direction:column;
+
+    }
+
+}

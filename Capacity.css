@@ -1,0 +1,370 @@
+/* ========================= */
+/* PAGE BACKGROUND */
+/* ========================= */
+
+.capacity-container{
+    min-height:100vh;
+    padding:40px;
+    background:linear-gradient(
+        135deg,
+        #4B1D31,
+        #6E2947
+    );
+    position:relative;
+    overflow:hidden;
+}
+
+/* ========================= */
+/* BACKGROUND CIRCLES */
+/* ========================= */
+
+.capacity-container::before{
+    content:"";
+    position:absolute;
+    width:260px;
+    height:260px;
+    border-radius:50%;
+    background:rgba(255,255,255,.08);
+    top:-80px;
+    left:-80px;
+}
+
+.capacity-container::after{
+    content:"";
+    position:absolute;
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    background:rgba(255,255,255,.08);
+    bottom:-50px;
+    right:-50px;
+}
+
+/* ========================= */
+/* BACK BUTTON */
+/* ========================= */
+
+.back-btn{
+
+    position:relative;
+    z-index:100;
+
+    display:flex;
+    align-items:center;
+    gap:8px;
+
+    background:#5A243E;
+    color:white;
+
+    border:none;
+
+    border-radius:14px;
+
+    padding:14px 22px;
+
+    font-size:15px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    margin-bottom:30px;
+
+}
+
+.back-btn:hover{
+
+    background:#E2B357;
+    color:#4B1D31;
+
+    transform:translateY(-3px);
+
+}
+
+/* ========================= */
+/* HEADER */
+/* ========================= */
+
+.page-header{
+
+    max-width:900px;
+
+    margin:20px auto 40px;
+
+    background:rgba(255,255,255,.10);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:28px;
+
+    padding:35px;
+
+    text-align:center;
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,.25);
+
+}
+
+/* ========================= */
+/* TITLE */
+/* ========================= */
+
+.title-row{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:18px;
+
+    margin-bottom:30px;
+
+}
+
+.title-icon{
+
+    width:70px;
+
+    height:70px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    background:rgba(226,179,87,.15);
+
+    color:#E2B357;
+
+    box-shadow:
+        0 8px 18px rgba(226,179,87,.20);
+
+}
+
+.page-title{
+
+    margin:0;
+
+    color:white;
+
+    font-size:56px;
+
+    font-weight:800;
+
+    letter-spacing:.5px;
+
+    text-shadow:
+        0 6px 18px rgba(0,0,0,.30);
+
+}
+
+/* ========================= */
+/* CAPACITY BOX */
+/* ========================= */
+
+.capacity-box{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.capacity-box label{
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:600;
+
+}
+
+.capacity-box select{
+
+    width:280px;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:15px;
+
+    font-size:16px;
+
+    outline:none;
+
+    transition:.3s;
+
+}
+
+.capacity-box select:focus{
+
+    box-shadow:
+        0 0 18px rgba(226,179,87,.40);
+
+}
+
+/* ========================= */
+/* TABLE */
+/* ========================= */
+
+.table-wrapper{
+
+    background:white;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,.25);
+
+}
+
+.capacity-table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+.capacity-table th{
+
+    background:#5A243E;
+
+    color:white;
+
+    padding:18px;
+
+    font-size:17px;
+
+}
+
+.capacity-table td{
+
+    text-align:center;
+
+    padding:18px;
+
+    border-bottom:1px solid #ECECEC;
+
+    color:#8A95A8;
+
+    font-size:16px;
+
+}
+
+.capacity-table tbody tr{
+
+    transition:.3s;
+
+}
+
+.capacity-table tbody tr:hover{
+
+    background:#FFF5D8;
+
+}
+
+/* ========================= */
+/* STATUS BADGES */
+/* ========================= */
+
+.available{
+
+    display:inline-block;
+
+    min-width:110px;
+
+    padding:8px 16px;
+
+    border-radius:30px;
+
+    background:#EAF8EF;
+
+    color:#2E7D32;
+
+    font-weight:700;
+
+}
+
+.occupied{
+
+    display:inline-block;
+
+    min-width:110px;
+
+    padding:8px 16px;
+
+    border-radius:30px;
+
+    background:#FFE9E9;
+
+    color:#C62828;
+
+    font-weight:700;
+
+}
+
+/* ========================= */
+/* NO RESULT */
+/* ========================= */
+
+.no-result{
+
+    padding:25px;
+
+    text-align:center;
+
+    color:#C62828;
+
+    font-weight:700;
+
+    font-size:18px;
+
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media(max-width:768px){
+
+    .capacity-container{
+
+        padding:20px;
+
+    }
+
+    .page-title{
+
+        font-size:38px;
+
+    }
+
+    .title-row{
+
+        flex-direction:column;
+
+    }
+
+    .capacity-box select{
+
+        width:100%;
+
+    }
+
+}

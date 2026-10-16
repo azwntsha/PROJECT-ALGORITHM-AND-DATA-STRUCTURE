@@ -1,0 +1,337 @@
+/* ========================= */
+/* PAGE BACKGROUND */
+/* ========================= */
+
+.checkout-container{
+    min-height:100vh;
+    padding:40px;
+    background:linear-gradient(
+        135deg,
+        #4B1D31,
+        #6E2947
+    );
+    position:relative;
+    overflow:hidden;
+}
+
+/* ========================= */
+/* BACKGROUND CIRCLES */
+/* ========================= */
+
+.checkout-container::before{
+    content:"";
+    position:absolute;
+    width:260px;
+    height:260px;
+    border-radius:50%;
+    background:rgba(255,255,255,.08);
+    top:-80px;
+    left:-80px;
+}
+
+.checkout-container::after{
+    content:"";
+    position:absolute;
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    background:rgba(255,255,255,.08);
+    bottom:-50px;
+    right:-50px;
+}
+
+/* ========================= */
+/* BACK BUTTON */
+/* ========================= */
+
+.back-btn{
+
+    position:relative;
+    z-index:100;
+
+    display:flex;
+    align-items:center;
+    gap:8px;
+
+    background:#5A243E;
+    color:white;
+
+    border:none;
+    border-radius:14px;
+
+    padding:14px 22px;
+
+    font-size:15px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    margin-bottom:30px;
+
+}
+
+.back-btn:hover{
+
+    background:#E2B357;
+    color:#4B1D31;
+
+    transform:translateY(-3px);
+
+}
+
+/* ========================= */
+/* HEADER */
+/* ========================= */
+
+.page-header{
+
+    max-width:900px;
+
+    margin:20px auto;
+
+    background:rgba(255,255,255,.10);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:28px;
+
+    padding:35px;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.25);
+
+}
+
+/* ========================= */
+/* TITLE */
+/* ========================= */
+
+.title-row{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:18px;
+
+    margin-bottom:35px;
+
+}
+
+.title-icon{
+
+    width:70px;
+    height:70px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:50%;
+
+    background:rgba(231,76,60,.15);
+
+    color:#FF8A80;
+
+    box-shadow:0 8px 18px rgba(231,76,60,.25);
+
+}
+
+.page-title{
+
+    margin:0;
+
+    color:white;
+
+    font-size:56px;
+
+    font-weight:800;
+
+    text-shadow:0 6px 18px rgba(0,0,0,.30);
+
+}
+
+/* ========================= */
+/* FORM */
+/* ========================= */
+
+.checkout-card{
+
+    max-width:500px;
+
+    margin:0 auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+.checkout-card label{
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:600;
+
+}
+
+.checkout-card select{
+
+    width:100%;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:15px;
+
+    font-size:16px;
+
+    outline:none;
+
+    box-sizing:border-box;
+
+}
+
+.checkout-card select:focus{
+
+    box-shadow:0 0 18px rgba(226,179,87,.40);
+
+}
+
+/* ========================= */
+/* BUTTON */
+/* ========================= */
+
+.checkout-btn{
+
+    width:100%;
+
+    margin-top:10px;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:40px;
+
+    background:#E2B357;
+
+    color:#4B1D31;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.checkout-btn:hover{
+
+    background:#F4C96D;
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 25px rgba(0,0,0,.25);
+
+}
+
+/* ========================= */
+/* SUCCESS */
+/* ========================= */
+
+.success-card{
+
+    max-width:500px;
+
+    margin:30px auto;
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:25px;
+
+    text-align:center;
+
+    box-shadow:0 20px 35px rgba(0,0,0,.20);
+
+    animation:fadeIn .4s ease;
+
+}
+
+.success-card h3{
+
+    margin:0 0 12px;
+
+    color:#C62828;
+
+    font-size:24px;
+
+}
+
+.success-card p{
+
+    margin:0;
+
+    color:#555;
+
+    line-height:1.6;
+
+}
+
+/* ========================= */
+/* ANIMATION */
+/* ========================= */
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media(max-width:768px){
+
+    .checkout-container{
+
+        padding:20px;
+
+    }
+
+    .page-title{
+
+        font-size:40px;
+
+    }
+
+    .title-row{
+
+        flex-direction:column;
+
+        gap:12px;
+
+    }
+
+}
